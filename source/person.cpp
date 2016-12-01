@@ -1,5 +1,7 @@
 #include "person.h"
 
+using namespace marc;
+
 Person::Person(char *_name, int _age, int _height, int _weight)
 {
 	this->_name = _name;
@@ -69,4 +71,4 @@ void Person::SetWeight(int weight)
 	_weight = weight;
 }
 
-/*jkhkhjkhjgjkgjk*/
+

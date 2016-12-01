@@ -4,6 +4,7 @@
 #include "person.h"
 
 using namespace std;
+using namespace marc;
 
 void ModifyPerson(Person *x);
 
@@ -13,13 +14,20 @@ int main(int argv, char* argc[])
 
 	person1.SetName("marc");
 	person1.SetAge(24);
+	person1.~Person();
 	person1.SetHeight(175);
 	person1.SetWeight(205);
+	
+	Person *marc = new Person();
+	int temp = marc->GetHeight();
+
+	//delete keyword call the deconstructor 
+	delete marc;
 
 	ModifyPerson(&person1);
 
 	Person person2("yvan", 42, 571, 502);
-	
+
 
 	/*char *str = "hello";
 	char st_r[6]{ "hello" };
